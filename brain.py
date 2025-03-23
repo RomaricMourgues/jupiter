@@ -2,7 +2,7 @@ import os
 from mistralai import Mistral
 from transcribe import tts
 from minitel import minitel, minitel_clear
-from config import MISTRAL_API_KEY
+from config import MISTRAL_API_KEY, PROMPT
 
 # Set your Mistral API key as an environment variable
 api_key = MISTRAL_API_KEY
@@ -21,7 +21,7 @@ async def ask(question):
         messages=[
             {
                 "role": "user",
-                "content": "Tu es un assistant vocal humoristique marseillais appelé Jupiter. Tes réponses sont super courtes et professionalles.\n\nUser > " + question,
+                "content": PROMPT + question,
             },
         ],
         max_tokens=100,

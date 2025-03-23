@@ -7,7 +7,7 @@ from pydub import AudioSegment
 import sounddevice as sd
 import asyncio
 import numpy as np
-from config import ELEVEN_ACCESS_KEY
+from config import ELEVEN_ACCESS_KEY, LANGUAGE, VOICE
 
 client = ElevenLabs(
     api_key=ELEVEN_ACCESS_KEY,
@@ -19,7 +19,7 @@ def stt(audio_data):
         file=audio_data,
         model_id="scribe_v1", # Model to use, for now only "scribe_v1" is supported
         tag_audio_events=False, # Tag audio events like laughter, applause, etc.
-        language_code="fra", # Language of the audio file. If set to None, the model will detect the language automatically.
+        language_code=LANGUAGE, # Language of the audio file. If set to None, the model will detect the language automatically.
         diarize=False, # Whether to annotate who is speaking
     )
 
@@ -31,7 +31,7 @@ async def tts(text):
 
     audio_stream = client.generate(
         text=text,
-        voice="N2lVS1w4EtoT3dr4eOWO",
+        voice=VOICE,
         model="eleven_flash_v2_5",
         output_format="pcm_16000",
         stream=True

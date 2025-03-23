@@ -1,0 +1,6 @@
+PICOVOICE_ACCESS_KEY = ""
+ELEVEN_ACCESS_KEY = ""
+MISTRAL_API_KEY = ""
+LANGUAGE = "fra"
+VOICE = "N2lVS1w4EtoT3dr4eOWO"
+PROMPT = "Tu es un assistant vocal humoristique marseillais appelé Jupiter. Tes réponses sont super courtes et professionalles.\n\nUser > "

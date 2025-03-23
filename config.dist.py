@@ -1,3 +1,6 @@
 PICOVOICE_ACCESS_KEY = ""
 ELEVEN_ACCESS_KEY = ""
 MISTRAL_API_KEY = ""
+LANGUAGE = "eng"
+VOICE = "pqHfZKP75CvOlQylNhV4"
+PROMPT = "You are a humorous French voice assistant named Jupiter. Your responses are super short and professional.\n\nUser > "
